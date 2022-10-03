@@ -17,20 +17,26 @@ export const help = async (args: string[]): Promise<string> => {
 `;
 };
 
-// Redirection
-export const repo = async (args: string[]): Promise<string> => {
-  window.open(`${config.repo}`);
-  return 'Opening Github repository...';
-};
-
 // About
 export const about = async (args: string[]): Promise<string> => {
-  return `Hi, I am ${config.name}. 
-Welcome to my website!
-More about me:
-'sumfetch' - short summary.
-'resume' - my latest resume.
-'readme' - my github readme.`;
+  return `Hey, my name is ${config.name}. 
+
+I am currently a first year computer science university student. 
+
+A few of my interests include:
+- ${config.interests.int1}
+- ${config.interests.int2}
+- ${config.interests.int3}
+- ${config.interests.int4}
+
+Commands to learn more:
+- resume
+- projects
+
+Commands to get in touch:
+- email
+- linkedin
+`;
 };
 
 export const resume = async (args: string[]): Promise<string> => {
@@ -38,19 +44,9 @@ export const resume = async (args: string[]): Promise<string> => {
   return 'Opening resume...';
 };
 
-// Donate
-export const donate = async (args: string[]): Promise<string> => {
-  return `thank you for your interest. 
-here are the ways you can support my work:
-- <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.donate_urls.paypal}" target="_blank">paypal</a></u>
-- <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.donate_urls.patreon}" target="_blank">patreon</a></u>
-`;
-};
-
 // Contact
 export const email = async (args: string[]): Promise<string> => {
-  window.open(`mailto:${config.email}`);
-  return `Opening mailto:${config.email}...`;
+  return `My email is ${config.email}. Invite me to an interview or send me cat videos.`;
 };
 
 export const github = async (args: string[]): Promise<string> => {
@@ -76,11 +72,6 @@ export const duckduckgo = async (args: string[]): Promise<string> => {
   return `Searching duckduckgo for ${args.join(' ')}...`;
 };
 
-export const bing = async (args: string[]): Promise<string> => {
-  window.open(`https://bing.com/search?q=${args.join(' ')}`);
-  return `Wow, really? You are using bing for ${args.join(' ')}?`;
-};
-
 export const reddit = async (args: string[]): Promise<string> => {
   window.open(`https://www.reddit.com/search/?q=${args.join(' ')}`);
   return `Searching reddit for ${args.join(' ')}...`;
@@ -91,60 +82,34 @@ export const echo = async (args: string[]): Promise<string> => {
   return args.join(' ');
 };
 
-export const whoami = async (args: string[]): Promise<string> => {
-  return `${config.ps1_username}`;
-};
-
-export const ls = async (args: string[]): Promise<string> => {
-  return `a
-bunch
-of
-fake
-directories`;
-};
-
 export const cd = async (args: string[]): Promise<string> => {
-  return `unfortunately, i cannot afford more directories.
-if you want to help, you can type 'donate'.`;
+  return `${args.join(' ')}: No such file or directory`;
 };
 
 export const date = async (args: string[]): Promise<string> => {
   return new Date().toString();
 };
 
-export const vi = async (args: string[]): Promise<string> => {
-  return `woah, you still use 'vi'? just try 'vim'.`;
-};
-
-export const vim = async (args: string[]): Promise<string> => {
-  return `'vim' is so outdated. how about 'nvim'?`;
-};
-
-export const nvim = async (args: string[]): Promise<string> => {
-  return `'nvim'? too fancy. why not 'emacs'?`;
-};
-
-export const emacs = async (args?: string[]): Promise<string> => {
-  return `you know what? just use vscode.`;
-};
-
 export const sudo = async (args?: string[]): Promise<string> => {
   window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank'); // ...I'm sorry
-  return `Permission denied: with little power comes... no responsibility? `;
+  return `Permission denied: nice try bro`;
 };
 
 // Banner
 export const banner = (args?: string[]): string => {
   return `
-Copyright (C) Microsoft Corporation. All rights reserved.
-                 ___.  ___.   .__                                   .__                                 
+Copyright (C) Microsoft Corporation. No rights reserved.
+               ___.  ___.   .__                                   .__                                 
   _______  ____\\_ |__\\_ |__ |__| ____   _____   __________________|__| ______     ____  ____   _____  
   \\_  __ \\/  _ \\| __ \\| __ \\|  |/ __ \\ /     \\ /  _ \\_  __ \\_  __ \\  |/  ___/   _/ ___\\/  _ \\ /     \\ 
    |  | \\(  <_> ) \\_\\ \\ \\_\\ \\  \\  ___/|  Y Y  (  <_> )  | \\/|  | \\/  |\\___ \\    \\  \\__(  <_> )  Y Y  \\
    |__|   \\____/|___  /___  /__|\\___  >__|_|  /\\____/|__|   |__|  |__/____  > /\\ \\___  >____/|__|_|  /
                     \\/    \\/        \\/      \\/                            \\/  \\/     \\/            \\/ 
 
-Welcome to my portfolio website.
+Welcome to my terminal portfolio website.
 Type 'help' into the terminal to get started.
+
+Type 'anondm' to send a message, no strings attatched. Won't be able to respond tho :(
+
 `;
 };
