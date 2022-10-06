@@ -44,6 +44,10 @@ export const resume = async (args: string[]): Promise<string> => {
   return 'Opening resume...';
 };
 
+export const blog = async (args: string[]): Promise<string> => {
+  return `if you're seeing this, this command is broken right now :( sorry`;
+};
+
 // Contact
 export const email = async (args: string[]): Promise<string> => {
   return `My email is ${config.email}. Invite me to an interview or send me cat videos.`;
@@ -108,6 +112,8 @@ Copyright (C) Microsoft Corporation. No rights reserved.
 
 Welcome to my terminal portfolio website.
 Type 'help' into the terminal to get started.
+
+Type 'blog' to read my most recent blog post!
 
 Type 'anondm' to send a message, no strings attatched. Won't be able to respond tho :(
 
