@@ -45,7 +45,7 @@ export const resume = async (args: string[]): Promise<string> => {
 };
 
 export const blog = async (args: string[]): Promise<string> => {
-  return `if you're seeing this, this command is broken right now :( sorry`;
+  return `Unfortunately, this command is broken right now. Sorry for any inconveniences caused.`;
 };
 
 // Contact

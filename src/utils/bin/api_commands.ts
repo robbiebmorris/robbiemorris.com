@@ -10,9 +10,7 @@ export const projects = async (args: string[]): Promise<string> => {
   return `Github repos:
 
 ${projects.map((repo) => `- ${repo.name} - <a class="text-light-blue dark:text-dark-blue underline" href="${repo.html_url}" target="_blank">${repo.html_url}</a>`,).join('\n')}
-  
-Other stuff:
-...yeah surely I'll add this soon...`;
+  `;
 };
 
 export const quote = async (args: string[]): Promise<string> => {
@@ -23,8 +21,7 @@ export const quote = async (args: string[]): Promise<string> => {
 export const readme = async (args: string[]): Promise<string> => {
   const readme = await getReadme();
   return `Opening GitHub README...\n
-  broken rn soz`;
-  //${readme}`;
+  ${readme}`;
 };
 
 export const anondm = async (args: string[]): Promise<string> => {
