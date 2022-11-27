@@ -39,10 +39,10 @@ Commands to get in touch:
 `;
 };
 
-export const resume = async (args: string[]): Promise<string> => {
-  window.open(`${config.resume_url}`);
-  return 'Opening resume...';
-};
+// export const resume = async (args: string[]): Promise<string> => {
+//   window.open(`${config.resume_url}`);
+//   return 'Opening resume...';
+// };
 
 export const blog = async (args: string[]): Promise<string> => {
   return `Unfortunately, this command is broken right now. Sorry for any inconveniences caused.`;
