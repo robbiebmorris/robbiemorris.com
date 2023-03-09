@@ -29,7 +29,7 @@ export const anondm = async (args: string[]): Promise<string> => {
   const message = args.join(' ');
   console.log(message)
   if (message == '') {
-    return "Example command: anondm ur so cool and smart!";
+    return "Example command: anondm Hello, world!";
   }
   const data = await postMessage(message);
   return data;

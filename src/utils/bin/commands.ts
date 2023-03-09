@@ -115,7 +115,7 @@ Type 'help' into the terminal to get started.
 
 Type 'blog' to read my most recent blog post!
 
-Type 'anondm' to send a message, no strings attatched. Won't be able to respond tho :(
+Type 'anondm' to send an anonymous message, no strings attatched.
 
 `;
 };
