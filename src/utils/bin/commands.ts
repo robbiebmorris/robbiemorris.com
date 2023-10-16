@@ -21,7 +21,7 @@ export const help = async (args: string[]): Promise<string> => {
 export const about = async (args: string[]): Promise<string> => {
   return `Hey, my name is ${config.name}. 
 
-I am currently a first year computer science university student. 
+I am currently a second year computer science university student. 
 
 A few of my interests include:
 - ${config.interests.int1}
@@ -112,10 +112,6 @@ Copyright (C) Microsoft Corporation. No rights reserved.
 
 Welcome to my terminal portfolio website.
 Type 'help' into the terminal to get started.
-
-Type 'blog' to read my most recent blog post!
-
-Type 'anondm' to send an anonymous message, no strings attatched.
 
 `;
 };
